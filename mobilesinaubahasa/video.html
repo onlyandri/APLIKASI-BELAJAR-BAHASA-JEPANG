@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>sinau bahasa</title>
+	<link rel="stylesheet" type="text/css" href="css/onsenui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/onsen-css-components.min.css">
+	<script src="js/onsenui.min.js"></script>
+	<style type="text/css">
+	
+	a {
+		text-decoration: none;
+	}
+</style>
+
+</head>
+<body >
+
+	<ons-splitter>
+		<ons-splitter-side id="menu" side="left" width="300px" collapse swipeable style="background-color: #dd8f09">
+			<ons-page >
+				<ons-list style="background-color: #ffa3f6">
+					<ons-list-item>
+						<img src="img/pice.jpg" alt="" style="width:100%">
+					</ons-list-item>
+					<a href="index.html">
+						<ons-list-item style="background-color:#ffe0fb;">
+							<div class="left">
+								<ons-icon icon="md-home"></ons-icon>
+							</div>
+							<div class="center">
+								Home
+							</div>
+						</ons-list-item>
+					</a>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/menit.svg">
+						</div>
+						<div class="center">
+							browse
+						</div>
+					</ons-list-item>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/orang.svg">
+						</div>
+						<div class="center">
+							akun
+						</div>
+					</ons-list-item>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/warna.svg">
+						</div>
+						<div class="center">
+							setting
+						</div>
+					</ons-list-item>
+				</ons-list>
+			</ons-page>
+		</ons-splitter-side>
+
+		<ons-splitter-content id="content" page="home.html">
+		</ons-splitter-content>
+	</ons-splitter>
+
+	<template id="home.html">
+		<ons-page >
+			<ons-toolbar style="background-color:#ffa3f6;">
+				<div class="left">
+					<ons-toolbar-button onclick="fn.open()" style="color:#000">
+						<ons-icon icon="md-menu"></ons-icon>
+					</ons-toolbar-button>
+				</div>
+				<div class="center">
+					VIDEO TURORIAL
+				</div>
+			</ons-toolbar>
+			<div class="card card--material" style="background-color:#f2ffe0; text-align: center;">
+				<div class="g-ytsubscribe" data-channelid="UCreVVSmI26rj42uOqoyf02g" data-layout="full" data-count="default"></div>
+			</div>
+			
+			
+			<div class="card card--material" id="lali"  style="background-color:#f2ffe0; margin-top: 0px; text-align: center;">
+			</div>
+			
+			
+		</ons-page>
+	</template>
+
+	<script src="https://apis.google.com/js/platform.js"></script>
+	<script src="fn.js"></script>
+	<script src="js/jquery1.js"></script> 
+	<script type="text/javascript">
+		
+		window.onload = function()
+		{
+				var yt = `https://www.googleapis.com/youtube/v3/search?key=AIzaSyCJpsKDjGgfgAhv9QpxiQqEvgAffOCgWjc&channelId=UCreVVSmI26rj42uOqoyf02g&maxResults=35&order=title&part=snippet`
+
+				$.ajax({
+
+					url: yt,
+					method: 'GET', 
+					dataType: 'JSONP',
+					success: function (res) {
+						var print = "";
+						var movie = res.items;
+						for (var i = 0; i < movie.length; i++) {
+
+							if (i%2==0) {
+								$('#lali').append(`
+									<ons-card style="background-color:#e0f8ff; width: 90%; height: 90%; margin-bottom: 20px;" tappable>
+									<h3>${movie[i]['snippet']['title']}</h3>
+									<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${movie[i]['id']['videoId']}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</ons-card>
+									`);
+							}
+							else{
+
+								$('#lali').append(`
+									<ons-card style="background-color:#ffe0fb; width: 90%; height: 90%; margin-bottom: 20px;" tappable>
+									<h3>${movie[i]['snippet']['title']}</h3>
+									<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${movie[i]['id']['videoId']}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</ons-card>
+									`);
+							}
+						}
+					},
+					error: function (err) {
+						$('#lali').append(` 
+							<ons-card style="width: 100%; height: 100%; margin-top: 200px; text-align: center; margin-bottom: 300px;">
+							<h3>check you internet connection</h3>
+							<ons-button modifier="large" onclick="panggil()" style="">reload</ons-button>
+							</ons-card>
+							`);
+					} 
+				});
+
+
+			}
+
+	</script>
+
+</body>
+</html>

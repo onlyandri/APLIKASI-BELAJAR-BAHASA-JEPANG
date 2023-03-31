@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hiragana</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="stylesheet" type="text/css" href="css/onsenui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/onsen-css-components.min.css">
+	<script src="js/onsenui.min.js"></script>
+	<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+	<style type="text/css">
+	
+	a {
+		text-decoration: none;
+	}
+</style>
+
+
+
+</head>
+<body>
+	<ons-splitter>
+		<ons-splitter-side id="menu" side="left" width="300px" collapse swipeable style="background-color: #dd8f09">
+			<ons-page >
+				<ons-list style="background-color: #ffa3f6">
+					<ons-list-item onclick="fn.load('home.html')"tappable>
+						<img src="img/pice.jpg" alt="" style="width:100%">
+					</ons-list-item>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/calender.svg">
+						</div>
+						<div class="center">
+							japan
+						</div>
+					</ons-list-item>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/menit.svg">
+						</div>
+						<div class="center">
+							browse
+						</div>
+					</ons-list-item>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/orang.svg">
+						</div>
+						<div class="center">
+							akun
+						</div>
+					</ons-list-item>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/warna.svg">
+						</div>
+						<div class="center">
+							setting
+						</div>
+					</ons-list-item>
+				</ons-list>
+			</ons-page>
+		</ons-splitter-side>
+		<ons-splitter-content id="content" page="hiragana.html">
+		</ons-splitter-content>
+	</ons-splitter>
+
+	<template id="hiragana.html">
+		<ons-page>
+			<ons-toolbar style="background-color:#ffa3f6;">
+				<div class="left">
+					<ons-toolbar-button onclick="fn.open()" style="color:#000">
+						<ons-icon icon="md-menu"></ons-icon>
+					</ons-toolbar-button>
+				</div>
+				<div class="center">
+					SINAU BAHASA
+				</div>
+				<div class="right" style="margin-right:20px;">
+					<a href="setting.html">
+						<ons-icon icon="fa-cog" style="margin-right:13px" onclick="fn.load('settings.html')"></ons-icon>
+					</a>
+					<a href="index.html">
+						<ons-icon icon="md-home" onclick="fn.load('home.html')"></ons-icon>
+					</a>
+				</div>
+			</ons-toolbar>
+			<div style="text-align: center; opacity: 0.6; padding-top: 20px; color: #000">
+				<h4>HIRAGANA</h4>
+			</div>
+
+			<section>
+				<ons-row  style="background-color:#ffffb8; padding-right: 10px;">
+					<ons-col > 
+						<ons-card  style="background-color:#b8ff70; width: 90%; height: 90%; text-align: center" onclick="play('div.title',0);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								あ
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								A
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ffd8d1; width: 90%; height: 90%; text-align: center" onclick="play('div.title',1);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								い
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								i
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ff99f8; width: 90%; height: 90%; text-align: center" onclick="play('div.title',2);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								う
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								u
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#a3e3ff; width: 90%; height: 90%; text-align: center" onclick="play('div.title',3);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								え
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								e
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#caff75; width: 90%; height: 90%; text-align: center" onclick="play('div.title',4);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								お
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								o
+							</div>
+						</ons-card>
+					</ons-col>
+				</ons-row>
+				<ons-row  style="background-color:#ffffb8;  padding-right: 10px;">
+					<ons-col > 
+						<ons-card style="background-color:#b8ff70; width: 90%; height: 90%; text-align: center" onclick="play('div.title',5);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								か
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								ka
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ffd8d1; width: 90%; height: 90%; text-align: center" onclick="play('div.title',6);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								き
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								ki
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ff99f8; width: 90%; height: 90%; text-align: center" onclick="play('div.title',7);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								く
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								ku
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#a3e3ff; width: 90%; height: 90%; text-align: center" onclick="play('div.title',8);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								け
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								ke
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#caff75; width: 90%; height: 90%; text-align: center" onclick="play('div.title',9);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								こ
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								ko
+							</div>
+						</ons-card>
+					</ons-col>
+				</ons-row>
+				<ons-row  style="background-color:#ffffb8; padding-right: 10px;">
+					<ons-col > 
+						<ons-card style="background-color:#b8ff70; width: 90%; height: 90%; text-align: center" onclick="play('div.title',10);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								さ
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								sa
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ffd8d1; width: 90%; height: 90%; text-align: center" onclick="play('div.title',11);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								し
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								shi
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ff99f8; width: 90%; height: 90%; text-align: center" onclick="play('div.title',12);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								す
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								su
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#a3e3ff; width: 90%; height: 90%; text-align: center" onclick="play('div.title',13);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								せ
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								se
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#caff75; width: 90%; height: 90%; text-align: center" onclick="play('div.title',14);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								そ
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								so
+							</div>
+						</ons-card>
+					</ons-col>
+				</ons-row>
+				<ons-row  style="background-color:#ffffb8;  padding-right: 10px;">
+					<ons-col > 
+						<ons-card style="background-color:#b8ff70; width: 90%; height: 90%; text-align: center" onclick="play('div.title',15);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								た
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								ta
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ffd8d1; width: 90%; height: 90%; text-align: center" onclick="play('div.title',16);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								ち
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								chi
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ff99f8; width: 90%; height: 90%; text-align: center" onclick="play('div.title',17);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								つ
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								tsu
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#a3e3ff; width: 90%; height: 90%; text-align: center" onclick="play('div.title',18);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								て
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								te
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#caff75; width: 90%; height: 90%; text-align: center" onclick="play('div.title',19);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								と
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								to
+							</div>
+						</ons-card>
+					</ons-col>
+				</ons-row>
+				<ons-row  style="background-color:#ffffb8;  padding-right: 10px;">
+					<ons-col > 
+						<ons-card style="background-color:#b8ff70; width: 90%; height: 90%; text-align: center" onclick="play('div.title',20);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								な
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								na
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ffd8d1; width: 90%; height: 90%; text-align: center" onclick="play('div.title',21);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								に
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								ni
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ff99f8; width: 90%; height: 90%; text-align: center" onclick="play('div.title',22);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								ぬ
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								nu
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#a3e3ff; width: 90%; height: 90%; text-align: center" onclick="play('div.title',23);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								ね
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								ne
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#caff75; width: 90%; height: 90%; text-align: center" onclick="play('div.title',24);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								の
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								no
+							</div>
+						</ons-card>
+					</ons-col>
+				</ons-row>
+				<ons-row  style="background-color:#ffffb8;  padding-right: 10px;">
+					<ons-col > 
+						<ons-card style="background-color:#b8ff70; width: 90%; height: 90%; text-align: center" onclick="play('div.title',25);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								は
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								ha
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ffd8d1; width: 90%; height: 90%; text-align: center" onclick="play('div.title',26);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								ひ
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								hi
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ff99f8; width: 90%; height: 90%; text-align: center" onclick="play('div.title',27);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								ふ
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								fu
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#a3e3ff; width: 90%; height: 90%; text-align: center" onclick="play('div.title',28);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								へ
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								he
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#caff75; width: 90%; height: 90%; text-align: center" onclick="play('div.title',29);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								ほ
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								ho
+							</div>
+						</ons-card>
+					</ons-col>
+				</ons-row>
+				<ons-row  style="background-color:#ffffb8;  padding-right: 10px;">
+					<ons-col > 
+						<ons-card style="background-color:#b8ff70; width: 90%; height: 90%; text-align: center" onclick="play('div.title',30);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								ま
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								ma
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ffd8d1; width: 90%; height: 90%; text-align: center" onclick="play('div.title',31);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								み
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								mi
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ff99f8; width: 90%; height: 90%; text-align: center" onclick="play('div.title',32);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								む
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								mu
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#a3e3ff; width: 90%; height: 90%; text-align: center" onclick="play('div.title',33);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								め
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								me
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#caff75; width: 90%; height: 90%; text-align: center" onclick="play('div.title',34);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								も
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								mo
+							</div>
+						</ons-card>
+					</ons-col>
+				</ons-row>
+				<ons-row  style="background-color:#ffffb8;  padding-right: 10px;">
+					<ons-col > 
+						<ons-card style="background-color:#b8ff70; width: 90%; height: 90%; text-align: center" onclick="play('div.title',35);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								や
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								ya
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ffffb8; width: 90%; height: 90%; text-align: center"tappable>	
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ff99f8; width: 90%; height: 90%; text-align: center" onclick="play('div.title',36);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								ゆ
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								yu
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ffffb8; width: 90%; height: 90%; text-align: center"tappable>
+
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#caff75; width: 90%; height: 90%; text-align: center" onclick="play('div.title',37);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								よ
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								yo
+							</div>
+						</ons-card>
+					</ons-col>
+				</ons-row>
+				<ons-row  style="background-color:#ffffb8;  padding-right: 10px;">
+					<ons-col > 
+						<ons-card style="background-color:#b8ff70; width: 90%; height: 90%; text-align: center" onclick="play('div.title',38);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								ら
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								ra
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ffd8d1; width: 90%; height: 90%; text-align: center" onclick="play('div.title',39);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								り
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								ri
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ff99f8; width: 90%; height: 90%; text-align: center"onclick="play('div.title',40);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								る
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								ru
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#a3e3ff; width: 90%; height: 90%; text-align: center" onclick="play('div.title',41);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								れ
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								re
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#caff75; width: 90%; height: 90%; text-align: center" onclick="play('div.title',42);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								ろ
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								ro
+							</div>
+						</ons-card>
+					</ons-col>
+				</ons-row>
+				<ons-row  style="background-color:#ffffb8;  padding-right: 10px;">
+					<ons-col > 
+						<ons-card style="background-color:#b8ff70; width: 90%; height: 90%; text-align: center" onclick="play('div.title',43);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								わ
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								wa
+							</div>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ffffb8; width: 90%; height: 90%; text-align: center" onclick="fn.load('foto.html')"tappable>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ffffb8; width: 90%; height: 90%; text-align: center" onclick="fn.load('foto.html')"tappable>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#ffffb8; width: 90%; height: 90%; text-align: center" onclick="fn.load('foto.html')"tappable>
+						</ons-card>
+					</ons-col>
+					<ons-col > 
+						<ons-card style="background-color:#caff75; width: 90%; height: 90%; text-align: center" onclick="play('div.title',44);"tappable>
+							<div class="title" style="color: #000; font-size: 100%; font-style: initial; text-align: center;">
+								を
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 100%; color: #000">
+								wo
+							</div>
+						</ons-card>
+					</ons-col>
+				</ons-row>
+			</section>
+			
+		</ons-page>
+
+	</template>
+	<script src="fn.js"></script>
+</body>
+</html>

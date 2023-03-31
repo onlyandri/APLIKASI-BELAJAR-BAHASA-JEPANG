@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hiragana</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="stylesheet" type="text/css" href="css/onsenui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/onsen-css-components.min.css">
+	<script src="js/onsenui.min.js"></script>
+	<style type="text/css">
+	
+	a {
+		text-decoration: none;
+	}
+</style>
+
+</head>
+<body>
+
+	<ons-splitter>
+		<ons-splitter-side id="menu" side="left" width="300px" collapse swipeable style="background-color: #dd8f09">
+			<ons-page >
+				<ons-list style="background-color: #ffa3f6">
+					<ons-list-item onclick="fn.load('home.html')"tappable>
+						<img src="img/pice.jpg" alt="" style="width:100%">
+					</ons-list-item>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/calender.svg">
+						</div>
+						<div class="center">
+							japan
+						</div>
+					</ons-list-item>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/menit.svg">
+						</div>
+						<div class="center">
+							browse
+						</div>
+					</ons-list-item>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/orang.svg">
+						</div>
+						<div class="center">
+							akun
+						</div>
+					</ons-list-item>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/warna.svg">
+						</div>
+						<div class="center">
+							setting
+						</div>
+					</ons-list-item>
+				</ons-list>
+			</ons-page>
+		</ons-splitter-side>
+		<ons-splitter-content id="content" page="nomor.html">
+		</ons-splitter-content>
+	</ons-splitter>
+
+
+	<template id="nomor.html">
+		<ons-page>
+			<ons-toolbar style="background-color:#ffa3f6;">
+				<div class="left">
+					<ons-toolbar-button onclick="fn.open()" style="color:#000">
+						<ons-icon icon="md-menu"></ons-icon>
+					</ons-toolbar-button>
+				</div>
+				<div class="center">
+					SINAU BAHASA
+				</div>
+				<div class="right" style="margin-right:20px;">
+					<a href="setting.html">
+						<ons-icon icon="fa-cog" style="margin-right:13px" onclick="fn.load('settings.html')"></ons-icon>
+					</a>
+					<a href="index.html">
+						<ons-icon icon="md-home" onclick="fn.load('home.html')"></ons-icon>
+					</a>
+				</div>
+			</ons-toolbar>
+			<ons-list-header>HITUNG ANGKA</ons-list-header>
+			<a href="angka.html">
+				<ons-list-item style="background-color:#ffff8a;"  onclick="loop();" tappable>
+				<div class="left">
+					<img class="list-item__thumbnail" src="img/nomor.svg">
+				</div>
+				<div class="center">
+					<span class="list-item__title">Nomor</span><span class="list-item__subtitle">0,1,2,3,4,5,6,7 ...</span>
+				</div>
+			  </ons-list-item >
+			</a>
+			<a href="tgl.html">
+			<ons-list-item style="background-color:#ffa3f6;">
+				<div class="left">
+					<img class="list-item__thumbnail" src="img/calender.svg">
+				</div>
+				<div class="center">
+					<span class="list-item__title">Tanggal</span><span class="list-item__subtitle">hari dalam bulan tanggal 1 sampai 31</span>
+				</div>
+			</ons-list-item>
+            </a>
+
+            <a href="bulan.html">
+			<ons-list-item style="background-color:#adffb4;">
+				<div class="left">
+					<img class="list-item__thumbnail" src="img/album.svg">
+				</div>
+				<div class="center">
+					<span class="list-item__title">bulan, hari dalam seminggu</span><span class="list-item__subtitle">januari, februari, senin, selasa</span>
+				</div>
+			</ons-list-item>
+		</a>
+            <a href="jam.html">
+			<ons-list-item style="background-color:#add8ff;">
+				<div class="left">
+					<img class="list-item__thumbnail" src="img/jam.svg">
+				</div>
+				<div class="center">
+					<span class="list-item__title">Jam</span><span class="list-item__subtitle">jam dalam sehari 1 sampai 12</span>
+				</div>
+			</ons-list-item>
+		</a>
+		<a href="menit.html">
+
+			<ons-list-item style="background-color:#ffbdfc;">
+				<div class="left">
+					<img class="list-item__thumbnail" src="img/menit.svg">
+				</div>
+				<div class="center">
+					<span class="list-item__title">menit</span><span class="list-item__subtitle">menit dalam satu jam</span>
+				</div>
+			</ons-list-item>
+			</a>
+
+			<ons-list-item style="background-color:#ffd9d1;">
+				<div class="left">
+					<img class="list-item__thumbnail" src="img/orang2.svg">
+				</div>
+				<div class="center">
+					<span class="list-item__title">hal umum</span><span class="list-item__subtitle">digunakan untuk menghitung semua jenis barang</span>
+				</div>
+			</ons-list-item>
+
+			<ons-list-item style="background-color:#d1ffd9;">
+				<div class="left">
+					<img class="list-item__thumbnail" src="img/orang.svg">
+				</div>
+				<div class="center">
+					<span class="list-item__title">orang</span><span class="list-item__subtitle">menghitung jumlah orang</span>
+				</div>
+			</ons-list-item>
+		</ons-page>
+	</template>
+
+	<script src="fn.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hiragana</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="stylesheet" type="text/css" href="css/onsenui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/onsen-css-components.min.css">
+	<script src="js/onsenui.min.js"></script>
+	<style type="text/css">
+	
+	a {
+		text-decoration: none;
+	}
+</style>
+
+</head>
+<body>
+	<ons-splitter>
+		<ons-splitter-side id="menu" side="left" width="300px" collapse swipeable style="background-color: #dd8f09">
+			<ons-page >
+				<ons-list style="background-color: #ffa3f6">
+					<ons-list-item onclick="fn.load('home.html')"tappable>
+						<img src="img/pice.jpg" alt="" style="width:100%">
+					</ons-list-item>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/calender.svg">
+						</div>
+						<div class="center">
+							japan
+						</div>
+					</ons-list-item>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/menit.svg">
+						</div>
+						<div class="center">
+							browse
+						</div>
+					</ons-list-item>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/orang.svg">
+						</div>
+						<div class="center">
+							akun
+						</div>
+					</ons-list-item>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/warna.svg">
+						</div>
+						<div class="center">
+							setting
+						</div>
+					</ons-list-item>
+				</ons-list>
+			</ons-page>
+		</ons-splitter-side>
+		<ons-splitter-content id="content" page="kalimat.html">
+		</ons-splitter-content>
+	</ons-splitter>
+
+
+	<template id="kalimat.html">
+		<ons-page>
+			<ons-toolbar style="background-color:#ffa3f6;">
+				<div class="left">
+					<ons-toolbar-button onclick="fn.open()" style="color:#000">
+						<ons-icon icon="md-menu"></ons-icon>
+					</ons-toolbar-button>
+				</div>
+				<div class="center">
+					SINAU BAHASA
+				</div>
+				<div class="right" style="margin-right:20px;">
+					<a href="setting.html">
+						<ons-icon icon="fa-cog" style="margin-right:13px" onclick="fn.load('settings.html')"></ons-icon>
+					</a>
+					<a href="index.html">
+						<ons-icon icon="md-home" onclick="fn.load('home.html')"></ons-icon>
+					</a>
+				</div>
+			</ons-toolbar>
+			<ons-list-header>KALIMAT UMUM</ons-list-header>
+			<ons-list-item style="background-color:#ffff8a;" onclick="play('span.list-item__title',0);">
+				<div class="left">
+					<img class="list-item__thumbnail" src="img/tanda.svg">
+				</div>
+				<div class="center">
+					<span class="list-item__title">おはようございます</span>
+					<span class="list-item__subtitle" style="color:crimson">Ohayou gozaimasu</span>
+					<span class="list-item__subtitle">selamat pagi</span>
+				</div>
+			</ons-list-item >
+			<ons-list-item style="background-color:#adffb4;" onclick="play('span.list-item__title',1);">
+				<div class="left">
+					<img class="list-item__thumbnail" src="img/tanda.svg">
+				</div>
+				<div class="center">
+					<span class="list-item__title">こんにちわ</span>
+					<span class="list-item__subtitle" style="color:crimson">konnichiwa</span>
+					<span class="list-item__subtitle">selamat sore</span>
+				</div>
+			</ons-list-item >
+
+			<ons-list-item style="background-color:#ffff8a;" onclick="play('span.list-item__title',2);">
+				<div class="left">
+					<img class="list-item__thumbnail" src="img/tanda.svg">
+				</div>
+				<div class="center">
+					<span class="list-item__title">こんばんは</span>
+					<span class="list-item__subtitle" style="color:crimson">konbanwa</span>
+					<span class="list-item__subtitle">selamat malam</span>
+				</div>
+			</ons-list-item >
+
+			<ons-list-item style="background-color:#adffb4;" onclick="play('span.list-item__title',3);">
+				<div class="left">
+					<img class="list-item__thumbnail" src="img/tanda.svg">
+				</div>
+				<div class="center">
+					<span class="list-item__title">おやすみなさい</span>
+					<span class="list-item__subtitle" style="color:crimson">oyasuminasai</span>
+					<span class="list-item__subtitle">selamat tidur</span>
+				</div>
+			</ons-list-item >
+
+			<ons-list-item style="background-color:#ffff8a;" onclick="play('span.list-item__title',4);">
+				<div class="left">
+					<img class="list-item__thumbnail" src="img/tanda.svg">
+				</div>
+				<div class="center">
+					<span class="list-item__title">お元気ですか。</span>
+					<span class="list-item__subtitle" style="color:crimson">ogenki desuka</span>
+					<span class="list-item__subtitle">apa kabar ?</span>
+				</div>
+			</ons-list-item >
+
+			<ons-list-item style="background-color:#adffb4;" onclick="play('span.list-item__title',5);">
+				<div class="left">
+					<img class="list-item__thumbnail" src="img/tanda.svg">
+				</div>
+				<div class="center">
+					<span class="list-item__title">はじめまして</span>
+					<span class="list-item__subtitle" style="color:crimson">hajimemashite</span>
+					<span class="list-item__subtitle">senang bertemu denganmu(pertama kali bertemu)</span>
+				</div>
+			</ons-list-item >
+
+			<ons-list-item style="background-color:#ffff8a;" onclick="play('span.list-item__title',6);">
+				<div class="left">
+					<img class="list-item__thumbnail" src="img/tanda.svg">
+				</div>
+				<div class="center">
+					<span class="list-item__title">よろしく</span>
+					<span class="list-item__subtitle" style="color:crimson">yoroshiku</span>
+					<span class="list-item__subtitle">senang bertemu denganmu (nonformal)</span>
+				</div>
+			</ons-list-item >
+
+			<ons-list-item style="background-color:#adffb4;" onclick="play('span.list-item__title',7);">
+				<div class="left">
+					<img class="list-item__thumbnail" src="img/tanda.svg">
+				</div>
+				<div class="center">
+					<span class="list-item__title">じゃ、またね。</span>
+					<span class="list-item__subtitle" style="color:crimson">ja, matane</span>
+					<span class="list-item__subtitle">sampai jumpa lagi</span>
+				</div>
+			</ons-list-item >
+		</ons-page>
+	</template>
+
+	<script src="fn.js"></script>
+	<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+</body>
+</html>

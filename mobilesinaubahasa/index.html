@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>sinau bahasa</title>
+	<link rel="stylesheet" type="text/css" href="css/onsenui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/onsen-css-components.min.css">
+	<script src="js/onsenui.min.js"></script>
+	<style type="text/css">
+	
+	a {
+		text-decoration: none;
+	}
+</style>
+
+</head>
+<body >
+
+	<ons-splitter>
+		<ons-splitter-side id="menu" side="left" width="300px" collapse swipeable style="background-color: #dd8f09">
+			<ons-page >
+				<ons-list style="background-color: #ffa3f6">
+					<ons-list-item onclick="fn.load('home.html')"tappable>
+						<img src="img/pice.jpg" alt="" style="width:100%">
+					</ons-list-item>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/calender.svg">
+						</div>
+						<div class="center">
+							japan
+						</div>
+					</ons-list-item>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/menit.svg">
+						</div>
+						<div class="center">
+							browse
+						</div>
+					</ons-list-item>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/orang.svg">
+						</div>
+						<div class="center">
+							akun
+						</div>
+					</ons-list-item>
+					<ons-list-item style="background-color:#ffe0fb;">
+						<div class="left">
+							<img class="list-item__thumbnail" src="img/warna.svg">
+						</div>
+						<div class="center">
+							setting
+						</div>
+					</ons-list-item>
+				</ons-list>
+			</ons-page>
+		</ons-splitter-side>
+
+		<ons-splitter-content id="content" page="home.html">
+		</ons-splitter-content>
+	</ons-splitter>
+
+	<template id="home.html">
+		<ons-page >
+			<ons-toolbar style="background-color:#ffa3f6;">
+				<div class="left">
+					<ons-toolbar-button onclick="fn.open()" style="color:#000">
+						<ons-icon icon="md-menu"></ons-icon>
+					</ons-toolbar-button>
+				</div>
+				<div class="center">
+					SINAU BAHASA
+				</div>
+				<div class="right" style="margin-right:20px;">
+					<a href="setting.html">
+						<ons-icon icon="fa-cog" style="margin-right:13px">
+						</ons-icon>
+					</a>
+					<ons-icon icon="md-face" onclick="fn.load('about.html')"></ons-icon>
+				</div>
+			</ons-toolbar>
+			<ons-row  style="background-color:#ffffb8; padding-top: 0px;">
+				<ons-col  style="padding-top: 30px;" > 
+					<a href="hiragana.html">
+						<ons-card style="background-color:#e0f8ff; width: 90%; height: 90%;" tappable>
+							<div class="title" style="color: #000; font-size: 500%; font-style: initial; text-align: center; padding-bottom: 30px;">
+								あ
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 150%; color: #000">
+								Hiragana
+							</div>
+						</ons-card>
+					</a>
+				</ons-col>
+				<ons-col style="padding-top: 30px;" > 
+					<a href="katakana.html">
+						<ons-card style="background-color:#ffe0fb; width: 90%; height: 90%;" tappable >
+							<div class="title" style="color: #000; font-size: 500%; font-style: initial; text-align: center; padding-bottom: 30px">
+								ア
+							</div>
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 150%; color: #000">
+								Katakana
+							</div>
+						</ons-card>
+					</a>
+					
+				</ons-col>
+			</ons-row>
+			<ons-row style="background-color:#ffffb8;">
+				<ons-col > 
+
+					<a href="nomor.html">
+						<ons-card style="background-color:#f2ffe0; width: 90%; height: 90%; text-align: center" tappable  >
+							<img src="img/angka.svg" alt="Onsen UI" style="width: 100%;">
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 150%; color: #000; padding-top:35px">
+								Hitung Nomor
+							</div>
+						</ons-card>
+					</a>
+				</ons-col>
+				<ons-col >
+					<a href="kalimat.html"> 
+						<ons-card style="background-color:#dfd1ff; width: 90%; height: 90%; text-align: center"  onclick=""tappable >
+							<img src="img/mail.svg" alt="Onsen UI" style="width: 100%;">
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 150%; color: #000; padding-top:35px">
+								kalimat Umum
+							</div>
+						</ons-card>
+					</a>
+				</ons-col>
+			</ons-row>
+
+			<ons-row  style="background-color:#ffffb8;">
+				<ons-col > 
+					<a href="kosakata.html">
+						<ons-card style="background-color:#d6ff94;; width: 90%; height: 90%; text-align: center"  onclick=""tappable  >
+							<img src="img/hear2.svg" alt="Onsen UI" style="width: 100%;">
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 150%; color: #000; padding-top:35px">
+								Kosakata Penting
+							</div>
+						</ons-card>
+					</a>
+				</ons-col>
+				<ons-col > 
+					<a href="video.html">
+						<ons-card style="background-color:#fff2db;; width: 90%; height: 90%; text-align: center">
+							<img src="img/hear3.svg" alt="Onsen UI" style="width: 100%;">
+							<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 150%; color: #000; padding-top:35px">
+								Video Tutorial
+							</div>
+						</ons-card>
+					</a>
+				</ons-col>
+			</ons-row>
+			<ons-row style="background-color:#ffffb8;">
+				<ons-col > 
+					<ons-card style="background-color:#e0f8ff; width: 90%; height: 90%;" onclick="keluar();"tappable>
+						<div class="title" style="color: #000; font-size: 500%; font-style: initial; text-align: center; padding-bottom: 50px;">
+							の
+						</div>
+						<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 150%; color: #000">
+							partikel
+						</div>
+					</ons-card>
+				</ons-col>
+				<ons-col > 
+					<ons-card style="background-color:#caffc2; width: 90%; height: 90%; text-align: center" >
+						<img src="img/school.svg" alt="Onsen UI" style="width: 100%;">
+						<div class="content"  style=" text-align:center; font: bold; font-style: italic; font-size: 150%; color: #000; padding-top:35px">
+							Latihan
+						</div>
+					</ons-card>
+				</ons-col>
+			</ons-row>
+			
+		</ons-page>
+	</template>
+	<script type="text/javascript">
+	init();
+</script>
+
+</body>
+<script src="fn.js"></script>
+<script src="js/jquery1.js"></script>
+<script type="text/javascript">
+// 	$(function(){
+
+//   $(window).on('beforeunload',function()
+//   {
+//      return '';
+//   })
+// });
+
+function init(){
+
+		document.addEventListener('deviceready', startup, false);
+	}
+
+	function startup(){
+
+		console.log("fungsi exit app");
+		document.addEventListener("backbutton", doClose, false);
+	}
+     function doClose(){
+            function showExitAlert(){
+
+		navigator.notification.confirm('anda yakin ingin keluar ?', exitApp,'sinau bahasa','OK, Cancel');
+	}
+     }
+
+	function exitApp(buttonIndex){
+
+		if(buttonIndex == 1){
+
+			navigator.app.exitApp();
+
+		}
+		else{
+			window.close();
+		}
+	}
+
+</script>
+
+
+</html>

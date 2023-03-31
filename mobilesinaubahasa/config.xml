@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "onlyandri97@gmail.com"
+    android-versionCode = "10"
+    version     = "1.0.0" >
+ 
+<!-- versionCode is optional and Android only -->
+ 
+  <name>SINAU BAHASA YUK</name>
+  <icon src="img/ikon.png"  />
+
+  <preference name="fullscreen"    value="true"/>
+  <preference name="show-splash-screen-spinner" value="true"/>
+  <preference name="auto-hide-splash-screen"  value="true"/>
+
+ 
+  <description>
+      aplikasi untuk belajar bahasa jepang dengan mudah dan cepat
+  </description>
+ 
+  <author href="https://dosenprogramming.com" email="[email protected]">
+      andri
+  </author>
+  <gap:splash  src="img/d.jpg"  gap:platform="android" gap:qualifier="port-xhdpi"/>
+  <plugin name="cordova-plugin-inappbrowser" />
+  <plugin name="cordova-plugin-whitelist" version="1" />
+    
+  <access origin="*" />
+  <allow-intent href="https://*/*" />
+  <allow-navigation href="https://*/*" />
+  
+</widget>
